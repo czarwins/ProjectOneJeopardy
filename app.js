@@ -1,3 +1,5 @@
+let endGame = 0;
+// if(x = 0; x < 25;x++){}
 let citiesCat = [
     { question: 'Hometown of the Knickerbockers', answer: 'New York', score: $('#cities-1').text() },
     { question: 'First hometown of the Lakers', answer: 'Minneapolis', score: $('#cities-2').text() },
@@ -34,6 +36,7 @@ let offCourtCat = [
     { question: 'First hometown of the Lakers', answer: 'Minneapolis', score: $('#offCourt-5').text() },
 ];
 
+let ansCnt = 0;
 class GameJep {
     constructor(question, answer, score, cat, value,id) {
         this.question = question;
@@ -44,37 +47,45 @@ class GameJep {
         this.id = id;
     }
     klik() {
-        console.log('test');
-
+        // console.log('test');
+        
         $(this.cat + this.id).html(this.question);
         $(this.cat + this.id).css("font-size", "20px");
-
+        
     }
-
     dblKlik() {
         let answer1 = prompt("Final Answer", "")
         let answer2 = answer1.toLowerCase();
-        console.log(answer2);
+        ansCnt++
         
+        if(ansCnt == 25){
+            
+            if(playerScore > 0){
+            console.log('winner');
+            // console.log(ansCnt)
+            }else{
+                console.log("loser")
+            }
+            }
         
         if (answer2 == this.answer.toLowerCase()) {
             alert("correct")
-
             
-                playerScore += this.score
-                $('#scoreBox').text(Number(playerScore))
-                console.log(Number(playerScore));
-                
             
+            playerScore += Number(this.score)
+            $('#scoreBox').text(Number(playerScore))
+            console.log(Number(playerScore));      
+          
         }
-
+        
         else {
             alert("False")
-            playerScore -= this.score
-                $('#scoreBox').text(Number(playerScore))
-                console.log(Number(playerScore));
+            playerScore -= Number(this.score)
+            $('#scoreBox').text(Number(playerScore))
+            console.log(Number(playerScore));
         }
     }
+
 }
 let playerScore = 0;
 
@@ -92,7 +103,7 @@ for (i = 0; i < 5; i++) {
 let stadiumsObj = [];
 for (i = 0; i < 5; i++) {
 
-    let workObj = new GameJep(stadiumsCat[i].question, stadiumsCat[i].answer, stadiumsCat[i].score, '#stadiums-',i + 1)
+    let workObj = new GameJep(stadiumsCat[i].question, stadiumsCat[i].answer, stadiumsCat[i].score, '#stadiums-',100,i + 1)
     stadiumsObj.push(workObj)
     $('#stadiums-' + (i +1)).click(() => workObj.klik())
     $('#stadiums-' + (i +1)).dblclick(() => workObj.dblKlik())
@@ -101,7 +112,7 @@ for (i = 0; i < 5; i++) {
 let legendsObj = [];
 for (i = 0; i < 5; i++) {
 
-    let workObj = new GameJep(legendsCat[i].question, legendsCat[i].answer, legendsCat[i].score, '#legends-',i + 1)
+    let workObj = new GameJep(legendsCat[i].question, legendsCat[i].answer, legendsCat[i].score, '#legends-',100,i + 1)
     legendsObj.push(workObj)
     $('#legends-' + (i +1)).click(() => workObj.klik())
     $('#legends-' + (i +1)).dblclick(() => workObj.dblKlik())
@@ -109,7 +120,7 @@ for (i = 0; i < 5; i++) {
 let onCourtObj = [];
 for (i = 0; i < 5; i++) {
 
-    let workObj = new GameJep(onCourtCat[i].question, onCourtCat[i].answer, onCourtCat[i].score, '#onCourt-',i + 1)
+    let workObj = new GameJep(onCourtCat[i].question, onCourtCat[i].answer, onCourtCat[i].score, '#onCourt-',100,i + 1)
     onCourtObj.push(workObj)
     $('#onCourt-' + (i +1)).click(() => workObj.klik())
     $('#onCourt-' + (i +1)).dblclick(() => workObj.dblKlik())
@@ -117,7 +128,7 @@ for (i = 0; i < 5; i++) {
 let offCourtObj = [];
 for (i = 0; i < 5; i++) {
 
-    let workObj = new GameJep(offCourtCat[i].question, offCourtCat[i].answer, offCourtCat[i].score, '#offCourt-',i + 1)
+    let workObj = new GameJep(offCourtCat[i].question, offCourtCat[i].answer, offCourtCat[i].score, '#offCourt-',100,i + 1)
     offCourtObj.push(workObj)
     $('#offCourt-' + (i +1)).click(() => workObj.klik())
     $('#offCourt-' + (i +1)).dblclick(() => workObj.dblKlik())
