@@ -1,9 +1,13 @@
-
+table{
+    min-width: 1000px;
+    padding-left: 25px;
+}
 table td {
     font-size: 55px;
     padding: 25px;
     text-align: center;
     color: yellow;
+
 }
  h1{
     font-size: 60px;
@@ -19,6 +23,12 @@ th{
     padding-left: 5px;
     padding-right: 5px;
 }
+/* #citiesOne:hover{
+    height: 75px;
+    width: 100px;
+    font-size: 70px;
+} */
+
 .container {
     width: 100%;
     padding-right: 15px;
@@ -26,6 +36,7 @@ th{
     margin-right: auto;
     margin-left: auto;
     background-color: blue;
+    border: solid 5px black;
   }
   /* Media Queries from bootstrap CSS file */
   @media (min-width: 576px) {

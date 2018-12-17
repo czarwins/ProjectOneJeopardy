@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Jeopardy</title>
     <link rel="stylesheet" href="main.css">
-    <script
+    <script defer
         src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
-    <script src="app.js"></script>
+    <script defer src="app.js"></script>
 </head>
 <body>
     <div class="container">
@@ -18,49 +18,57 @@
             <table id="jepGame">
                 <thead><h1>NBA Jeopardy</h1></thead>
                 <!-- header row -->
-                <th>NBA Cities</th>
-                <th>NBA Stadiums</th>
-                <th>NBA Legends</th>
-                <th>On the Court</th>
-                <th>Off the Court</th>
-
+                <th id="cities">NBA Cities</th>
+                <th id="stadiums">NBA Stadiums</th>
+                <th id="legends">NBA Legends</th>
+                <th id="onCourt">On the Court</th>
+                <th id="offCourt">Off the Court</th>
+                <!-- header ends -->
                 <!-- 100 row -->
-                <tr>
-                    <td id="" >$100</td>
-                    <td id="" >$100</td>
-                    <td id="" >$100</td>
-                    <td id="" >$100</td>
-                    <td id="" >$100</td>
+                <tr class="rows" id="rowOne">
+                    <td id="citiesOne" >100</td>
+                    <td id="stadiumsOne" >100</td>
+                    <td id="legendsOne" >100</td>
+                    <td id="onCourtOne" >100</td>
+                    <td id="offCourtOne" >100</td>
                 </tr>
-                 <tr>
-                    <td id="" >$200</td>
-                    <td id="" >$200</td>
-                    <td id="" >$200</td>
-                    <td id="" >$200</td>
-                    <td id="" >$200</td>
+                <!-- 100 row ends -->
+                <!-- 200 row -->
+                 <tr class="rows" id="rowTwo">
+                    <td id="citiesTwo" >200</td>
+                    <td id="stadiumTwo" >200</td>
+                    <td id="legendsTwo" >200</td>
+                    <td id="onCourtTwo" >200</td>
+                    <td id="offCourtTwo" >200</td>
                  </tr>
-                 <tr>
-                    <td id="" >$300</td>
-                    <td id="" >$300</td>
-                    <td id="" >$300</td>
-                    <td id="" >$300</td>
-                    <td id="" >$300</td>
+                 <!-- 200 row ends -->
+                 <!-- 300 row -->
+                 <tr class="rows" id="rowThree">
+                    <td id="citiesThree" >300</td>
+                    <td id="stadiumThree" >300</td>
+                    <td id="legendsThree" >300</td>
+                    <td id="onCourtThree" >300</td>
+                    <td id="offCourtThree" >300</td>
                  </tr>
-                 <tr>
-                    <td id="" >$400</td>
-                    <td id="" >$400</td>
-                    <td id="" >$400</td>
-                    <td id="" >$400</td>
-                    <td id="" >$400</td>
+                <!-- 300 row ends -->
+                <!-- 400 row -->
+                 <tr class="rows" id="rowFour">
+                    <td id="citiesFour" >400</td>
+                    <td id="stadiumsFour" >400</td>
+                    <td id="legendsFour" >400</td>
+                    <td id="onCourtFour" >400</td>
+                    <td id="offCourtFour" >400</td>
                  </tr>
-                 <tr>
-                    <td id="" >$500</td>
-                    <td id="" >$500</td>
-                    <td id="" >$500</td>
-                    <td id="" >$500</td>
-                    <td id="" >$500</td>
-                    
+                 <!-- 400 row ends -->
+                 <!-- 500 row -->
+                 <tr class="rows" id="rowFive">
+                    <td id="citiesFive" >500</td>
+                    <td id="stadiumsFive" >500</td>
+                    <td id="legendsFive" >500</td>
+                    <td id="onCourtFive" >500</td>
+                    <td id="offCourtFive" >500</td>
                  </tr>
+                 <!-- 500 row ends -->
             </table>
         </div>
 
