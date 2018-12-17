@@ -1,62 +1,124 @@
-$(document).ready(function(){
-    $('#citiesOne').click(function(){
-        console.log($(this).text());
+let citiesCat = [
+    { question: 'Hometown of the Knickerbockers', answer: 'New York', score: $('#cities-1').text() },
+    { question: 'First hometown of the Lakers', answer: 'Minneapolis', score: $('#cities-2').text() },
+    { question: 'First hometown of the Lakers', answer: 'Minneapolis', score: $('#cities-3').text() },
+    { question: 'First hometown of the Lakers', answer: 'Minneapolis', score: $('#cities-4').text() },
+    { question: 'First hometown of the Lakers', answer: 'Minneapolis', score: $('#cities-5').text() },
+];
+let stadiumsCat = [
+    { question: 'Hometown of the Knickerbockers', answer: 'New York', score: $('#stadiums-1').text() },
+    { question: 'First hometown of the Lakers', answer: 'Minneapolis', score: $('#stadiums-2').text() },
+    { question: 'First hometown of the Lakers', answer: 'Minneapolis', score: $('#stadiums-3').text() },
+    { question: 'First hometown of the Lakers', answer: 'Minneapolis', score: $('#stadiums-4').text() },
+    { question: 'First hometown of the Lakers', answer: 'Minneapolis', score: $('#stadiums-5').text() },
+];
+let legendsCat = [
+    { question: 'Hometown of the Knickerbockers', answer: 'New York', score: $('#legends-1').text() },
+    { question: 'First hometown of the Lakers', answer: 'Minneapolis', score: $('#legends-2').text() },
+    { question: 'First hometown of the Lakers', answer: 'Minneapolis', score: $('#legends-3').text() },
+    { question: 'First hometown of the Lakers', answer: 'Minneapolis', score: $('#legends-4').text() },
+    { question: 'First hometown of the Lakers', answer: 'Minneapolis', score: $('#legends-5').text() },
+];
+let onCourtCat = [
+    { question: 'Hometown of the Knickerbockers', answer: 'New York', score: $('#onCourt-1').text() },
+    { question: 'First hometown of the Lakers', answer: 'Minneapolis', score: $('#onCourt-2').text() },
+    { question: 'First hometown of the Lakers', answer: 'Minneapolis', score: $('onCourt-3').text() },
+    { question: 'First hometown of the Lakers', answer: 'Minneapolis', score: $('#onCourt-4').text() },
+    { question: 'First hometown of the Lakers', answer: 'Minneapolis', score: $('#onCourt-5').text() },
+];
+let offCourtCat = [
+    { question: 'Hometown of the Knickerbockers', answer: 'New York', score: $('#offCourt-1').text() },
+    { question: 'First hometown of the Lakers', answer: 'Minneapolis', score: $('#offCourt-2').text() },
+    { question: 'First hometown of the Lakers', answer: 'Minneapolis', score: $('offCourt-3').text() },
+    { question: 'First hometown of the Lakers', answer: 'Minneapolis', score: $('#offCourt-4').text() },
+    { question: 'First hometown of the Lakers', answer: 'Minneapolis', score: $('#offCourt-5').text() },
+];
 
-    })
+class GameJep {
+    constructor(question, answer, score, cat, value,id) {
+        this.question = question;
+        this.answer = answer;
+        this.score = score;
+        this.cat= cat;
+        this.value = value;
+        this.id = id;
+    }
+    klik() {
+        console.log('test');
 
-    $('#citiesOne').click(function qlik(){
-        $(this).text("The hometown of the Knickerbockers ");
-        $(this).css("font-size","20px");
-});
-});
-$(document).ready(function dblQlik(){
-$('#citiesOne').dblclick(function(){ 
+        $(this.cat + this.id).html(this.question);
+        $(this.cat + this.id).css("font-size", "20px");
 
-let answer1 = prompt("Final Answer","")
-let answer2 = answer1.toLowerCase();
+    }
 
-if(answer2 == "new york"){
-    alert("correct")
+    dblKlik() {
+        let answer1 = prompt("Final Answer", "")
+        let answer2 = answer1.toLowerCase();
+        console.log(answer2);
+        
+        
+        if (answer2 == this.answer.toLowerCase()) {
+            alert("correct")
+
+            
+                playerScore += this.score
+                $('#scoreBox').text(Number(playerScore))
+                console.log(Number(playerScore));
+                
+            
+        }
+
+        else {
+            alert("False")
+            playerScore -= this.score
+                $('#scoreBox').text(Number(playerScore))
+                console.log(Number(playerScore));
+        }
+    }
 }
-
-else{
-    alert("false")
-}
-})
-});
-
-let testy = "Where are the Knickerbockers located?";
+let playerScore = 0;
 
 
-// constructor functions
-function Game(player1,player2,board){
-    this.player1 = player1;
-    this.player2 =player2;
-    this.players = [this.player1,this.player2];
-    this.currentPlayerIndex = 0;
-    this.currentPlayer = this.players[this.currentPlayerIndex];
+let citiesObj = [];
+for (i = 0; i < 5; i++) {
 
-    this.newGame();
-}
-
-function Player (name){
-    this.name = name;
-    this.score = 0;
-    // this.correct = this.addPoints();
-    // console.log(this.score);
+    let workObj = new GameJep(citiesCat[i].question, citiesCat[i].answer, citiesCat[i].score, '#cities-',100,i + 1)
+    citiesObj.push(workObj)
+    $('#cities-' + (i +1)).click(() => workObj.klik())
+    $('#cities-' + (i +1)).dblclick(() => workObj.dblKlik())
     
 }
-function Que(question,answer,score){
-    this.question = question;
-    this.answer = answer;
-    this.score = score
-    console.log(score);
-    
+
+let stadiumsObj = [];
+for (i = 0; i < 5; i++) {
+
+    let workObj = new GameJep(stadiumsCat[i].question, stadiumsCat[i].answer, stadiumsCat[i].score, '#stadiums-',i + 1)
+    stadiumsObj.push(workObj)
+    $('#stadiums-' + (i +1)).click(() => workObj.klik())
+    $('#stadiums-' + (i +1)).dblclick(() => workObj.dblKlik())
 }
-// end constructor functions
 
-// Game methods
+let legendsObj = [];
+for (i = 0; i < 5; i++) {
 
-const citiesOne = new Que('hometown of the Knickerbockers','New York',$('#citiesOne').text())
-console.log(citiesOne);
+    let workObj = new GameJep(legendsCat[i].question, legendsCat[i].answer, legendsCat[i].score, '#legends-',i + 1)
+    legendsObj.push(workObj)
+    $('#legends-' + (i +1)).click(() => workObj.klik())
+    $('#legends-' + (i +1)).dblclick(() => workObj.dblKlik())
+}
+let onCourtObj = [];
+for (i = 0; i < 5; i++) {
 
+    let workObj = new GameJep(onCourtCat[i].question, onCourtCat[i].answer, onCourtCat[i].score, '#onCourt-',i + 1)
+    onCourtObj.push(workObj)
+    $('#onCourt-' + (i +1)).click(() => workObj.klik())
+    $('#onCourt-' + (i +1)).dblclick(() => workObj.dblKlik())
+}
+let offCourtObj = [];
+for (i = 0; i < 5; i++) {
+
+    let workObj = new GameJep(offCourtCat[i].question, offCourtCat[i].answer, offCourtCat[i].score, '#offCourt-',i + 1)
+    offCourtObj.push(workObj)
+    $('#offCourt-' + (i +1)).click(() => workObj.klik())
+    $('#offCourt-' + (i +1)).dblclick(() => workObj.dblKlik())
+}
