@@ -22,6 +22,9 @@ body{
     border: dashed blue 2px;
     font-family: 'Staatliches', cursive;
 }
+.instructions{
+    margin-top: 10px;
+}
 .containerBox audio{margin-top: 20px }
 table{
     min-width: 1000px;
