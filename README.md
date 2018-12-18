@@ -5,3 +5,7 @@ Description:Welcome to NBA Jeopardy. This game is a fun and exciting way to lear
 
 Demo:https://xenodochial-varahamihira-f39925.netlify.com/index.html
 
+Story board: https://trello.com/b/IuLJDT4u
+
+
+
