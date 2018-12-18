@@ -1,3 +1,4 @@
+// game category data
 let citiesCat = [
     { question: 'Current home of the Hawks', answer: 'Atlanta', score: $('#cities-1').text() },
     { question: 'Only NBA city with 2 teams', answer: 'Los Angeles', score: $('#cities-2').text() },
@@ -33,7 +34,7 @@ let offCourtCat = [
     { question: 'He was the first NBA player to sign a shoe deal (Converse)', answer: 'Julius Erving', score: $('#offCourt-4').text() },
     { question: 'This man signed a 25 year contract with the Lakers for $25M in 1981', answer: 'Magic Johnson', score: $('#offCourt-5').text() },
 ];
-
+// question constructor
 let ansCnt = 0;
 class JepQuestion {
     constructor(question, answer, score, cat, value,id) {
@@ -44,19 +45,20 @@ class JepQuestion {
         this.value = value;
         this.id = id;
     }
+    // click method to reveal answer
     klik() {
         // console.log('test');
-        
         $(this.cat + this.id).html(this.question);
         $(this.cat + this.id).css("font-size", "20px");
         $(this.cat + this.id).css("font-color", "yellow");
         
     }
+    // double click method to prompt for answer input
     dblKlik() {
         let answer1 = prompt(this.question, "(Not case sensitive)")
         let answer2 = answer1.toLowerCase();
         ansCnt++
-        
+        // end game feature
         if(ansCnt == 25){
             // console.log('test');
             
@@ -67,12 +69,10 @@ class JepQuestion {
                 swal("You Lost... Try again!")
             }
             }
-        
+        // prevents case sensitivity for answers
         if (answer2 == this.answer.toLowerCase()) {
             
             swal("Correct!", "Way to go!", "success");
-            
-            
             playerScore += Number(this.score)
             $('#scoreBox').text(Number(playerScore))
             // console.log(Number(playerScore));      
@@ -80,7 +80,7 @@ class JepQuestion {
         }
         
         else {
-            // swal("Incorrect...")
+            
             swal("Incorrect...", "Better luck next time!", "error");
             playerScore -= Number(this.score)
             $('#scoreBox').text(Number(playerScore))
@@ -89,9 +89,11 @@ class JepQuestion {
     }
 
 }
+// question constructor ends
+
 let playerScore = 0;
 
-
+// category objects
 let citiesObj = [];
 for (counter = 0; counter < 5; counter++) {
 
@@ -135,6 +137,8 @@ for (counter = 0; counter < 5; counter++) {
     $('#offCourt-' + (counter +1)).click(() => workObj.klik())
     $('#offCourt-' + (counter +1)).dblclick(() => workObj.dblKlik())
 }
+// category objects ends
+
 // audio
 var sound = document.getElementById("myAudio"); 
 

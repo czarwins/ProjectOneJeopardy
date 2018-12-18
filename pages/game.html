@@ -16,11 +16,13 @@
 </head>
 <body>
     <div class="containerBox">
+        <!-- new game button -->
         <a href="game.html">New Game</a>
         <div class="container">
         <div class="jepDiv">
             <table id="jepGame">
                 <thead><h1>NBA Jeopardy</h1><div><h4>Score: <span id="scoreBox">0</span></h4></div></thead>
+
                 <!-- header row -->
                 <th id="cities">NBA Cities</th>
                 <th id="stadiums">NBA Stadiums</th>
@@ -28,6 +30,7 @@
                 <th id="onCourt">On the Court</th>
                 <th id="offCourt">Off the Court</th>
                 <!-- header ends -->
+
                 <!-- 100 row -->
                 <tr class="rows" id="rowOne">
                     <td id="cities-1" >100</td>
@@ -37,6 +40,7 @@
                     <td id="offCourt-1" >100</td>
                 </tr>
                 <!-- 100 row ends -->
+
                 <!-- 200 row -->
                  <tr class="rows" id="rowTwo">
                     <td id="cities-2" >200</td>
@@ -46,6 +50,7 @@
                     <td id="offCourt-2" >200</td>
                  </tr>
                  <!-- 200 row ends -->
+
                  <!-- 300 row -->
                  <tr class="rows" id="rowThree">
                     <td id="cities-3" >300</td>
@@ -55,6 +60,7 @@
                     <td id="offCourt-3" >300</td>
                  </tr>
                 <!-- 300 row ends -->
+
                 <!-- 400 row -->
                  <tr class="rows" id="rowFour">
                     <td id="cities-4" >400</td>
@@ -64,6 +70,7 @@
                     <td id="offCourt-4" >400</td>
                  </tr>
                  <!-- 400 row ends -->
+
                  <!-- 500 row -->
                  <tr class="rows" id="rowFive">
                     <td id="cities-5" >500</td>
@@ -80,11 +87,14 @@
 
 
         </div>
-        
+        <!-- audio -->
         <audio id="myAudio"  src="/audio/Jeopardy-theme-song.mp3" type="audio/mpeg"></audio>
         <button onclick="playAudio()" type="button">Start Timer</button>
-<button onclick="pauseAudio()" type="button">Pause Timer</button>
-<a class="instructions" href="/index.html">Instructions</a>
+        <button onclick="pauseAudio()" type="button">Pause Timer</button>
+        <!-- audio ends -->
+
+        <!-- instructions button -->
+        <a class="instructions" href="/index.html">Instructions</a>
     </div>
 </body>
 </html>
