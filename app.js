@@ -13,25 +13,25 @@ let stadiumsCat = [
     { question: 'Only arena where the home and away team can both have home court advantage', answer: 'Staples Center', score: $('#stadiums-5').text() },
 ];
 let legendsCat = [
-    { question: 'Hometown of the Knickerbockers', answer: 'New York', score: $('#legends-1').text() },
-    { question: 'First hometown of the Lakers', answer: 'Minneapolis', score: $('#legends-2').text() },
-    { question: 'First hometown of the Lakers', answer: 'Minneapolis', score: $('#legends-3').text() },
-    { question: 'First hometown of the Lakers', answer: 'Minneapolis', score: $('#legends-4').text() },
-    { question: 'First hometown of the Lakers', answer: 'Minneapolis', score: $('#legends-5').text() },
+    { question: 'He won more championships than anyone ever, 11 rings', answer: 'Bill Russell', score: $('#legends-1').text() },
+    { question: 'The only person in NBA history to score 100 points in a single game', answer: 'Wilt Chamberlin', score: $('#legends-2').text() },
+    { question: 'The first man to average a triple double', answer: 'Oscar Robertson', score: $('#legends-3').text() },
+    { question: "This man has been widely considered the greatest player of all time since the 1990's", answer: 'Michael Jordan', score: $('#legends-4').text() },
+    { question: 'He scored the most points in NBA History, 38,387', answer: 'Kareem Abdul-Jabbar', score: $('#legends-5').text() },
 ];
 let onCourtCat = [
-    { question: 'Hometown of the Knickerbockers', answer: 'New York', score: $('#onCourt-1').text() },
+    { question: 'The number of players that start the game for each team', answer: '5', score: $('#onCourt-1').text() },
     { question: 'First hometown of the Lakers', answer: 'Minneapolis', score: $('#onCourt-2').text() },
     { question: 'First hometown of the Lakers', answer: 'Minneapolis', score: $('onCourt-3').text() },
     { question: 'First hometown of the Lakers', answer: 'Minneapolis', score: $('#onCourt-4').text() },
     { question: 'First hometown of the Lakers', answer: 'Minneapolis', score: $('#onCourt-5').text() },
 ];
 let offCourtCat = [
-    { question: 'Hometown of the Knickerbockers', answer: 'New York', score: $('#offCourt-1').text() },
-    { question: 'First hometown of the Lakers', answer: 'Minneapolis', score: $('#offCourt-2').text() },
-    { question: 'First hometown of the Lakers', answer: 'Minneapolis', score: $('offCourt-3').text() },
-    { question: 'First hometown of the Lakers', answer: 'Minneapolis', score: $('#offCourt-4').text() },
-    { question: 'First hometown of the Lakers', answer: 'Minneapolis', score: $('#offCourt-5').text() },
+    { question: "Michael Jordan was selected 3rd overall in this year's draft", answer: '1984', score: $('#offCourt-1').text() },
+    { question: "LeBron James made 'the decision' to leave Cleveland to go to this city", answer: 'Miami', score: $('#offCourt-2').text() },
+    { question: 'The only player in NBA history to have more than one jersey retired', answer: 'Kobe Bryant', score: $('offCourt-3').text() },
+    { question: 'He was the first NBA player to sign a shoe deal (Converse)', answer: 'Julius Erving', score: $('#offCourt-4').text() },
+    { question: 'This man signed a 25 year contract with the Lakers for $25M in 1981', answer: 'Magic Johnson', score: $('#offCourt-5').text() },
 ];
 
 let ansCnt = 0;
