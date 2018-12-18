@@ -7,5 +7,5 @@ Demo:https://xenodochial-varahamihira-f39925.netlify.com/index.html
 
 Story board: https://trello.com/b/IuLJDT4u
 
-
+Wireframe: included in wireframe folder as well as the story board
 
