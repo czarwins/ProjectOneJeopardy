@@ -1,16 +1,16 @@
 let citiesCat = [
-    { question: 'Hometown of the Knickerbockers', answer: 'New York', score: $('#cities-1').text() },
-    { question: 'First hometown of the Lakers', answer: 'Minneapolis', score: $('#cities-2').text() },
-    { question: 'First hometown of the Lakers', answer: 'Minneapolis', score: $('#cities-3').text() },
-    { question: 'First hometown of the Lakers', answer: 'Minneapolis', score: $('#cities-4').text() },
+    { question: 'Current home of the Hawks', answer: 'Atlanta', score: $('#cities-1').text() },
+    { question: 'Only NBA city with 2 teams', answer: 'Los Angeles', score: $('#cities-2').text() },
+    { question: 'The Sonics played here...', answer: 'Seattle', score: $('#cities-3').text() },
+    { question: 'Hometown of the Knickerbockers', answer: 'New York', score: $('#cities-4').text() },
     { question: 'First hometown of the Lakers', answer: 'Minneapolis', score: $('#cities-5').text() },
 ];
 let stadiumsCat = [
-    { question: 'Hometown of the Knickerbockers', answer: 'New York', score: $('#stadiums-1').text() },
-    { question: 'First hometown of the Lakers', answer: 'Minneapolis', score: $('#stadiums-2').text() },
-    { question: 'First hometown of the Lakers', answer: 'Minneapolis', score: $('#stadiums-3').text() },
-    { question: 'First hometown of the Lakers', answer: 'Minneapolis', score: $('#stadiums-4').text() },
-    { question: 'First hometown of the Lakers', answer: 'Minneapolis', score: $('#stadiums-5').text() },
+    { question: 'The Hawks play at home in this newly named stadium', answer: 'State Farm Arena', score: $('#stadiums-1').text() },
+    { question: '', answer: 'Minneapolis', score: $('#stadiums-2').text() },
+    { question: '', answer: 'Minneapolis', score: $('#stadiums-3').text() },
+    { question: 'The most iconic venue in sports', answer: 'Madison Square Garden', score: $('#stadiums-4').text() },
+    { question: 'Only arena where the home and away team can both have home court advantage', answer: 'Staples Center', score: $('#stadiums-5').text() },
 ];
 let legendsCat = [
     { question: 'Hometown of the Knickerbockers', answer: 'New York', score: $('#legends-1').text() },
