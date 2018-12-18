@@ -7,8 +7,8 @@ let citiesCat = [
 ];
 let stadiumsCat = [
     { question: 'The Hawks play at home in this newly named stadium', answer: 'State Farm Arena', score: $('#stadiums-1').text() },
-    { question: '', answer: 'Minneapolis', score: $('#stadiums-2').text() },
-    { question: '', answer: 'Minneapolis', score: $('#stadiums-3').text() },
+    { question: 'The Chicago Bulls won 6 championships here', answer: 'United Center', score: $('#stadiums-2').text() },
+    { question: 'Historic Home of the Boston Celtics', answer: 'TD Garden', score: $('#stadiums-3').text() },
     { question: 'The most iconic venue in sports', answer: 'Madison Square Garden', score: $('#stadiums-4').text() },
     { question: 'Only arena where the home and away team can both have home court advantage', answer: 'Staples Center', score: $('#stadiums-5').text() },
 ];
