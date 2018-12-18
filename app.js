@@ -53,7 +53,7 @@ class JepQuestion {
         
     }
     dblKlik() {
-        let answer1 = prompt("Answer (Not case sensitive)", "")
+        let answer1 = prompt(this.question, "(Not case sensitive)")
         let answer2 = answer1.toLowerCase();
         ansCnt++
         
