@@ -51,6 +51,7 @@ class GameJep {
         
         $(this.cat + this.id).html(this.question);
         $(this.cat + this.id).css("font-size", "20px");
+        $(this.cat + this.id).css("font-color", "yellow");
         
     }
     dblKlik() {
@@ -59,12 +60,13 @@ class GameJep {
         ansCnt++
         
         if(ansCnt == 25){
+            // console.log('test');
             
             if(playerScore > 0){
-            console.log('winner');
+            alert('Winner! You win $' + playerScore);
             // console.log(ansCnt)
             }else{
-                console.log("loser")
+                alert("You Lost... Try again!")
             }
             }
         
@@ -74,7 +76,7 @@ class GameJep {
             
             playerScore += Number(this.score)
             $('#scoreBox').text(Number(playerScore))
-            console.log(Number(playerScore));      
+            // console.log(Number(playerScore));      
           
         }
         
@@ -82,7 +84,7 @@ class GameJep {
             alert("False")
             playerScore -= Number(this.score)
             $('#scoreBox').text(Number(playerScore))
-            console.log(Number(playerScore));
+            // console.log(Number(playerScore));
         }
     }
 

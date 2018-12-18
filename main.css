@@ -1,12 +1,35 @@
+body{
+    background-color: blue  ;
+}
+.containerBox{
+    background-color: red;
+    margin: 25px 50px 25px 50px;
+    padding: 50px 0 50px 0;
+    border: solid white 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.containerBox a{
+    text-decoration: none;
+    color: white;
+    margin-bottom: 7px;
+    border: dashed blue 2px;
+}
+
 table{
     min-width: 1000px;
     padding-left: 25px;
+}
+thead{
+    background-color: blue;
 }
 table td {
     font-size: 55px;
     padding: 25px;
     text-align: center;
-    color: yellow;
+    color: blue;
+    text-shadow: 1px 1px orangered;
     cursor: pointer
 
 }
@@ -17,7 +40,8 @@ table td {
     color: yellow;
 }
 h4{
-    color: orange;
+    color: red;
+    text-shadow: 1px 1px black;
     text-align: center;
     font-size: 20px;
 }
@@ -41,8 +65,9 @@ th{
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
-    background-color: blue;
-    border: solid 5px black;
+    background-image: url(images/ball3point.jpg);
+    background-size: cover;
+    border: solid 5px white;
   }
   /* Media Queries from bootstrap CSS file */
   @media (min-width: 576px) {
