@@ -15,6 +15,7 @@ body{
     color: white;
     margin-bottom: 7px;
     border: dashed blue 2px;
+    font-family: 'Staatliches', cursive;
 }
 
 table{
@@ -30,7 +31,8 @@ table td {
     text-align: center;
     color: blue;
     text-shadow: 1px 1px orangered;
-    cursor: pointer
+    cursor: pointer;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
 
 }
  h1{
@@ -38,17 +40,20 @@ table td {
     text-align: center;
     text-shadow: 3px 3px black;
     color: yellow;
+    font-family: 'Satisfy', cursive;
 }
 h4{
     color: red;
     text-shadow: 1px 1px black;
     text-align: center;
     font-size: 20px;
+    font-family: 'Staatliches', cursive;
 }
 th{
     font-size: 35px;
     text-align: center;
     color: white;
+    font-family: permanent marker;
     text-shadow: 2px 2px black;
     padding-left: 5px;
     padding-right: 5px;
@@ -93,4 +98,68 @@ th{
       max-width: 1140px;
     }
   }
+
+  /* landing page styles */
+  .baseDiv{
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      color: white;
+      font-family: 'Major Mono Display', monospace;
+      font-weight: 800;
+  }
+  .welcomeDiv{
+      text-align: center;
+      min-width: 700px;
+  }
+  .linkDiv a{
+    text-decoration: none;
+    animation: color-change 2.5s infinite;
+    font-size: 40px;
+    font-family: permanent marker;
+    text-shadow: 2px 2px black;
+  }
+  @keyframes color-change {
+    0% { color: white; }
+    50% { color: red; }
+    100% { color: white; }
+}
+.instructionsDiv ul{
+    list-style-type: none; 
+    text-align: center;
+    line-height: 30px;
+}
+.instructionsDiv{
+    text-align: center;
+}
+
+.animateRight{
+    animation-name: slideLeft;
+    animation-duration: 4s;
+    transition: all 4s ease;
+    
+}
+/* ANIMATION */
+@keyframes slideLeft{
+    0%{
+        margin-left: 2500px;
+    }
+    100%{
+        margin-left: 0%;
+    }
+}
+.animateLeft{
+    animation-name: slideRight ;
+    animation-duration: 4s;
+    transition: all 4s ease;
+    
+}
+@keyframes slideRight{
+    0%{
+        margin-left: -2500px;
+    }
+    100%{
+        margin-left: 0%;
+    }
+}
   
