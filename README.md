@@ -11,3 +11,5 @@ Wireframe: included in wireframe folder as well as the story board
 
 Technologies: HTML5, CSS3,ES5, ES6, jQuery, Sweetalert.js, Google Fonts
 
+Version 2 Additions: Images and audio
+
