@@ -134,7 +134,9 @@ th{
 .instructionsDiv{
     text-align: center;
 }
-
+.instructionsDiv h3{
+    color: red;
+}
 .animateRight{
     animation-name: slideLeft;
     animation-duration: 4s;
