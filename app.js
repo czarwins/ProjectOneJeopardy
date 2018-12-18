@@ -53,7 +53,7 @@ class JepQuestion {
         
     }
     dblKlik() {
-        let answer1 = prompt("Final Answer", "")
+        let answer1 = prompt("Answer (Not case sensitive)", "")
         let answer2 = answer1.toLowerCase();
         ansCnt++
         
@@ -61,15 +61,16 @@ class JepQuestion {
             // console.log('test');
             
             if(playerScore > 0){
-            alert('Winner! You win $' + playerScore);
+            swal('Winner! You win $' + playerScore);
             // console.log(ansCnt)
             }else{
-                alert("You Lost... Try again!")
+                swal("You Lost... Try again!")
             }
             }
         
         if (answer2 == this.answer.toLowerCase()) {
-            alert("correct")
+            
+            swal("Correct!", "Way to go!", "success");
             
             
             playerScore += Number(this.score)
@@ -79,7 +80,8 @@ class JepQuestion {
         }
         
         else {
-            alert("False")
+            // swal("Incorrect...")
+            swal("Incorrect...", "Better luck next time!", "error");
             playerScore -= Number(this.score)
             $('#scoreBox').text(Number(playerScore))
             // console.log(Number(playerScore));
