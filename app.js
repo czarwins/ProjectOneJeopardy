@@ -24,7 +24,7 @@ let onCourtCat = [
     { question: 'Every game starts with this', answer: 'Tip off', score: $('#onCourt-2').text() },
     { question: 'The basketball is made out of this material', answer: 'Leather', score: $('onCourt-3').text() },
     { question: 'The player makes a shot while being fouled and makes the free throw attempt', answer: 'And one', score: $('#onCourt-4').text() },
-    { question: 'The number of feet from the 3 point line to goal', answer: '23.75', score: $('#onCourt-5').text() },
+    { question: 'The number of feet from the 3 point line to the goal', answer: '23.75', score: $('#onCourt-5').text() },
 ];
 let offCourtCat = [
     { question: "Michael Jordan was selected 3rd overall in this year's draft", answer: '1984', score: $('#offCourt-1').text() },
